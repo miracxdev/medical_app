@@ -10,6 +10,15 @@ const double paddingXXL = 35;
 const double paddingXXXL = 40;
 const double paddingXXXXL = 45;
 const double paddingXXXXXL = 55;
+const double paddingXXXXXXL = 65;
+const double paddingXXXXXXXL = 75;
+const double paddingXXXXXXXXL = 85;
+const double paddingXXXXXXXXXL = 95;
+const double paddingXXXXXXXXXXL = 105;
+const double paddingXXXXXXXXXXXL = 115;
+const double paddingXXXXXXXXXXXXL = 120;
+const double paddingXXXXXXXXXXXXXL = 130;
+const double paddingXXXXXXXXXXXXXXL = 140;
 
 const double radiusXXXXXS = 3;
 const double radiusXXXXS = 4;

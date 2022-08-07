@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app/ui/app_constants/start_screen/controller/view/start_screen.dart';
+import 'package:medical_app/ui/start_screen/start_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
       
