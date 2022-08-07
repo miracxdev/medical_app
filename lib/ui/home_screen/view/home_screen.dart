@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app/ui/app_constants/padding_size.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -30,15 +29,15 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Text("Your Hands!", style: TextStyle(color: Colors.black, fontSize: 30,),),
           
-            ListView.separated(
-              itemCount: 4,
-              separatorBuilder: (BuildContext context, int index) {
-                return ;
-              },
-              itemBuilder: (BuildContext context, int index) {
-                return ;
-              },
-            ),
+            // ListView.separated(
+            //   itemCount: 4,
+            //   separatorBuilder: (BuildContext context, int index) {
+            //     return ;
+            //   },
+            //   itemBuilder: (BuildContext context, int index) {
+            //     return ;
+            //   },
+            // ),
           ],
           
         ));

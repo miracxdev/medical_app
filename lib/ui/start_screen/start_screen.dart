@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app/ui/app_constants/padding_size.dart';
 import 'package:medical_app/ui/home_screen/view/home_screen.dart';
+
+import '../../app/app_constants/padding_size.dart';
 
 class StartScreen extends StatefulWidget {
   StartScreen({Key? key}) : super(key: key);
@@ -70,8 +71,8 @@ class _StartScreenState extends State<StartScreen> {
             },
             child: const Text(
               "Get Started",
-              style:
-                  const TextStyle(backgroundColor: Colors.white, color: Colors.black),
+              style: const TextStyle(
+                  backgroundColor: Colors.white, color: Colors.black),
             ))
       ]),
     );
