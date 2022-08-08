@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_app/app/app_constants/padding_size.dart';
+import 'package:medical_app/ui/home_screen/controller/home_controller.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -9,8 +10,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  HomeScreenController homeScreenController = HomeScreenController();
 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,11 +63,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: paddingXXL,
               ),
-
               Row(
                 children: [
                   Expanded(
@@ -173,17 +172,21 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 flex: 5,
                 child: SizedBox(),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 4,
+                  itemBuilder: ((context, index) {
+                    return ListTile(
+                      leading: CircleAvatar(
+                        child: homeScreenController.avatar[index],
+                        backgroundColor: Colors.white,
+                      ),
+                      title: Text(homeScreenController.titles[index]),
+                    );
+                  }),
+                ),
               )
-
-              // ListView.separated(
-              //   itemCount: 4,
-              //   separatorBuilder: (BuildContext context, int index) {
-              //     return ;
-              //   },
-              //   itemBuilder: (BuildContext context, int index) {
-              //     return ;
-              //   },
-              // ),
             ],
           ),
         ));
