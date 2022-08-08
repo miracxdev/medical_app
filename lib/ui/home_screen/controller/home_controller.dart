@@ -1,6 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:medical_app/app/app_constants/padding_size.dart';
 
 class HomeScreenController {
+  List<String> titles2 = [
+    "surgeon",
+    "Urologist",
+    "Dentist",
+    "Midwife",
+  ];
+
+  List<Icon> icons = [
+    Icon(
+      Icons.person,
+      size: paddingL,
+    ),
+    Icon(
+      Icons.synagogue,
+      size: paddingL,
+    ),
+    Icon(
+      Icons.baby_changing_station,
+      size: paddingL,
+    ),
+    Icon(
+      Icons.person,
+      size: paddingL,
+    ),
+  ];
+
   List<String> titles = [
     "Dr. Smith",
     "Dr. Steve Son",
