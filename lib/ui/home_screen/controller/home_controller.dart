@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 
 class HomeScreenController {
   List<String> titles = [
-    "Dr. Smith"
-        "Dr. Steve Son"
-        "Dr. Banner"
-        "Dr. Clart Jon"
-        "Dr. Edith"
+    "Dr. Smith",
+    "Dr. Steve Son",
+    "Dr. Banner",
+    "Dr. Clart Jon",
+    "Dr. Edith",
   ];
 
   List<String> subtitles = [
-    "Surgeon"
-        "urologist"
-        "Dentist"
-        "Midwife"
+    "Surgeon",
+    "urologist",
+    "Dentist",
+    "Midwife",
   ];
 
   List<CircleAvatar> avatar = [

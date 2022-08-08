@@ -170,23 +170,23 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Expanded(
-                flex: 5,
-                child: SizedBox(),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 4,
-                  itemBuilder: ((context, index) {
-                    return ListTile(
-                      leading: CircleAvatar(
-                        child: homeScreenController.avatar[index],
-                        backgroundColor: Colors.white,
-                      ),
-                      title: Text(homeScreenController.titles[index]),
-                    );
-                  }),
-                ),
-              )
+                  flex: 5,
+                  child: SizedBox(
+                    child: ListView.builder(
+                      itemCount: 4,
+                      itemBuilder: ((context, index) {
+                        return ListTile(
+                          tileColor: Color(0xff2f80ed),
+                          textColor: Colors.white,
+                          leading: CircleAvatar(
+                            child: homeScreenController.avatar[index],
+                          ),
+                          title: Text(homeScreenController.titles[index]),
+                          subtitle: Text(homeScreenController.subtitles[index]),
+                        );
+                      }),
+                    ),
+                  )),
             ],
           ),
         ));
