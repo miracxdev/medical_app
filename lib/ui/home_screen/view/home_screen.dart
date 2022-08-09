@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             SizedBox(
                               height: paddingXXS,
                             ),
@@ -154,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: paddingXXS,
                             ),
                             Text(
-                              "Surgeon",
+                              homeScreenController.titles2[index],
                               style: TextStyle(
                                 color: Color(0xff2f80ed),
                               ),
@@ -175,16 +175,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: ListView.builder(
                       itemCount: 4,
                       itemBuilder: ((context, index) {
-                        return ListTile(
-                          tileColor: Color(0xff2f80ed),
-                          textColor: Colors.white,
-                          leading: CircleAvatar(
-                            child: homeScreenController.avatar[index],
+                        return Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ListTile(
+                            tileColor: Color(0xff2f80ed),
+                            textColor: Colors.white,
+                            leading: CircleAvatar(
+                              child: homeScreenController.avatar[index],
+                            ),
+                            title: Text(homeScreenController.titles[index]),
+                            subtitle:
+                                Text(homeScreenController.subtitles[index]),
                           ),
-                          title: Text(homeScreenController.titles[index]),
-                          subtitle: Text(homeScreenController.subtitles[index]),
                         );
-                      
                       }),
                     ),
                   )),
