@@ -28,10 +28,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: paddingM, top: paddingM),
+              padding: const EdgeInsets.only(right: paddingM, top: paddingM),
               child: CircleAvatar(
                 backgroundColor: Colors.grey[200],
-                child: Icon(
+                child: const Icon(
                   Icons.notifications_active_outlined,
                   color: Colors.black,
                 ),
@@ -43,17 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.symmetric(horizontal: paddingM),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: paddingXXL,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Find Doctor With",
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Your Hands!",
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: paddingXXL,
               ),
               Row(
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     flex: 18,
                     child: TextField(
                       decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Colors.grey[200]!),
@@ -83,12 +83,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           fillColor: Colors.white70),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Expanded(
                       flex: 4,
                       child: TextButton(
                         onPressed: () {},
-                        child: Icon(
+                        child: const Icon(
                           Icons.filter_list_outlined,
                           color: Colors.white,
                         ),
@@ -99,13 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               Radius.circular(10),
                             ),
                           ),
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               horizontal: paddingS, vertical: paddingM),
                         ),
                       ))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: paddingM,
               ),
               const Align(
@@ -139,27 +139,22 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: paddingXXS,
                             ),
                             CircleAvatar(
-                              backgroundColor: Color(0xff2f80ed),
-                              child: Icon(
-                                Icons.person,
-                                color: Colors.white,
-                                size: 30.0,
-                              ),
-                            ),
-                            SizedBox(
+                                backgroundColor: const Color(0xff2f80ed),
+                                child: homeScreenController.avatar[index]),
+                            const SizedBox(
                               height: paddingXXS,
                             ),
                             Text(
                               homeScreenController.titles2[index],
-                              style: TextStyle(
-                                color: Color(0xff2f80ed),
+                              style: const TextStyle(
+                                color: const Color(0xff2f80ed),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: paddingXXS,
                             ),
                           ],
@@ -169,18 +164,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   }),
                 ),
               ),
+              
               Expanded(
                   flex: 5,
                   child: SizedBox(
                     child: ListView.builder(
-                      itemCount: 4,
+                      itemCount: homeScreenController.titles.length,
                       itemBuilder: ((context, index) {
                         return Padding(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: ListTile(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12)),
-                            tileColor: Color(0xff2f80ed),
+                            tileColor: const Color(0xff2f80ed),
                             textColor: Colors.white,
                             leading: CircleAvatar(
                               child: homeScreenController.avatar[index],
