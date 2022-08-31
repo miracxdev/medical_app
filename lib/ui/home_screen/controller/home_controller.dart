@@ -7,6 +7,10 @@ class HomeScreenController {
     "Urologist",
     "Dentist",
     "Midwife",
+    "surgeon",
+    "Urologist",
+    "Dentist",
+    "Midwife",
   ];
 
   List<Icon> icons = [

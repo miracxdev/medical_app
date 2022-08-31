@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 flex: 2,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 4,
+                  itemCount: homeScreenController.titles2.length,
                   itemBuilder: ((context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
@@ -178,6 +178,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         return Padding(
                           padding: EdgeInsets.all(8.0),
                           child: ListTile(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
                             tileColor: Color(0xff2f80ed),
                             textColor: Colors.white,
                             leading: CircleAvatar(
